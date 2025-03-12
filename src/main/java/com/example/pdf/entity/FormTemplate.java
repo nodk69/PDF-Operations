@@ -15,11 +15,7 @@ public class FormTemplate {
 
 
     private String name;
-
-
     private String description;
-
-
     private String templatePath;
 
     @Lob
@@ -48,13 +44,5 @@ public class FormTemplate {
     @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
-    }
-
-    public byte[] getPdfData() {
-        return pdfData;
-    }
-
-    public void setPdfData(byte[] pdfData) {
-        this.pdfData = pdfData;
     }
 } 

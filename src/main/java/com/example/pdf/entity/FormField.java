@@ -13,26 +13,12 @@ public class FormField {
 
 
     private String name;
-
-
     private String type;
-
-
     private float x;
-
-
     private float y;
-
-
     private float width;
-
-
     private float height;
-
-
     private String defaultValue;
-
-
     private boolean required = false;
 
     @ManyToOne

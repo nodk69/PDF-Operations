@@ -1,6 +1,5 @@
 package com.example.pdf.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,10 +31,10 @@ public class Pdf {
 
     @Lob
    // @Column(columnDefinition = "BLOB", nullable = false)
-    private byte[] pdfData; // Stores the PDF as a byte array
+    private byte[] pdfData;
 
     @OneToOne(mappedBy = "pdf", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private PdfMetadata metadata; // Metadata is optional (nullable)
+    private PdfMetadata metadata;
 
     public void generatedAt(LocalDateTime now) {
         this.generatedAt = LocalDateTime.now();
